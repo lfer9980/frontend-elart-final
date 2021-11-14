@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Merriweather+Sans:wght@400;500;700&display=swap");
+/* fuentes principales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
+  background-color: #8C4830;
+  color: #FFF;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+body::after {
+  content: "";
+  background: url("../assets/img/fondo_elart.jpg");
+  background-position: center;
+  opacity: 0.75;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+main {
+  height: auto;
+}
+
+.body {
+  display: flex;
+}
+
+.sidebar {
+  position: relative;
+  max-width: 250px;
+  height: 100vh;
+  background-color: rgba(140, 72, 48, 0.6);
+  background-blend-mode: multiply;
+  text-align: center;
+  padding: 30px;
+  margin-right: 20px;
+  border-right: 1px solid #F2EDDC;
+  box-shadow: 0 4px 8px rgba(13, 13, 13, 0.7);
+}
+.sidebar__logo {
+  width: 100px;
+  height: auto;
+  margin: 20px auto;
+}
+.sidebar__username {
+  font-family: "Lato", sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.sidebar__nav {
+  text-align: left;
+}
+.sidebar__nav__data {
+  list-style: none;
+}
+.sidebar__item {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  padding: 5px;
+}
+.sidebar__item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #FFF;
+}
+.sidebar__item a i {
+  padding-right: 5px;
+}
+.sidebar__item:hover {
+  background-color: #F2EDDC;
+}
+.sidebar__item:hover a {
+  font-weight: bold;
+  color: #8C4830;
+}
+.sidebar .button--brown {
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  left: 0;
+  width: 150px;
+  height: 30px;
+  padding: 5px;
+  margin: 5px auto;
+  background-color: #8C4830;
+  border: 0;
+  box-shadow: 0 4px 8px rgba(13, 13, 13, 0.7);
+  cursor: pointer;
+}
+.sidebar .button--brown a {
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: #FFF;
+}
+.sidebar .button--brown:hover {
+  background-color: #F2EDDC;
+  border: 0;
+  box-shadow: 0 4px 8px rgba(13, 13, 13, 0.7);
+}
+.sidebar .button--brown:hover a {
+  color: #8C4830;
+}
+
+.home {
+  color: white;
+}
+.home__title {
+  font-family: "Lato", sans-serif;
+  font-size: 3.7rem;
+  font-weight: bold;
+}
+.home__wrapper {
+  display: flex;
+}
+.home__wrapper__section:nth-of-type(0) {
+  max-width: 190px;
+  height: 450px;
+}
+.home__wrapper__section {
+  margin-right: 40px;
+  max-width: 335px;
+  height: 590px;
+}
+.home__wrapper .profile-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.home__wrapper .profile-main__foto {
+  width: 150px;
+  height: 150px;
+}
+.home__wrapper .profile-main__foto img {
+  width: 100%;
+  height: auto;
+}
+.home__wrapper .profile-main__foto span {
+  font-family: "Lato", sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.home__wrapper .profile-main__foto span:nth-of-type(2) {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.home__wrapper .estrellas__title {
+  font-size: 2.7rem;
+  font-weight: bold;
+}
+.home__wrapper .estrellas__card p {
+  font-size: 2.1rem;
+}
+.home__wrapper .estrellas__wrapper i {
+  font-size: 2.4rem;
+}
+.home__wrapper .grafico__title {
+  font-size: 2.7rem;
+}
+.home__wrapper .grafico__main {
+  width: 100%;
+}
+.home__wrapper .department-eval__title {
+  font-size: 2.7rem;
+}
+.home__wrapper .department-eval__main i {
+  font-size: 3.7rem;
+}
+.home__wrapper .department-eval__main__text {
+  font-size: 1.6rem;
+}
+.home__wrapper .department-eval .button--brown {
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  left: 0;
+  width: 150px;
+  height: 30px;
+  padding: 5px;
+  margin: 5px auto;
+  background-color: #8C4830;
+  border: 0;
+  box-shadow: 0 4px 8px rgba(13, 13, 13, 0.7);
+  cursor: pointer;
+}
+.home__wrapper .department-eval .button--brown a {
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: #FFF;
+}
+.home__wrapper .department-eval .button--brown:hover {
+  background-color: #F2EDDC;
+  border: 0;
+  box-shadow: 0 4px 8px rgba(13, 13, 13, 0.7);
+}
+.home__wrapper .department-eval .button--brown:hover a {
+  color: #8C4830;
+}
+
+/*# sourceMappingURL=admin-home.css.map */
