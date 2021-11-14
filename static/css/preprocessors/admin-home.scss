@@ -1,0 +1,119 @@
+@import 'components/base';
+.body {
+	display: flex;
+}
+@import 'components/sidebar';
+
+.home {
+	color: white;
+	&__title {
+		font-family: $fuente2;
+		font-size: 3.7rem;
+		font-weight: bold;
+	}
+
+	&__wrapper {
+		display: flex;
+		&__section:nth-of-type(0) {
+			max-width: 190px;
+			height: 450px;
+		}
+		&__section {
+			margin-right: 40px;
+			max-width: 335px;
+			height: 590px;
+		}
+		.profile-main {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			&__foto {
+				width: 150px;
+				height: 150px;
+				img {
+					width: 100%;
+					height: auto;
+				}
+				span {
+					font-family: $fuente2;
+					font-size: 1.8rem;
+					font-weight: bold;
+				}
+				span:nth-of-type(2) {
+					font-size: 1.6rem;
+					font-weight: 500;
+				}
+			}
+		}
+
+		.estrellas {
+			&__title {
+				font-size: 2.7rem;
+				font-weight: bold;
+			}
+			&__card {
+				p {
+					font-size: 2.1rem;
+				}
+			}
+			&__wrapper {
+				i {
+					font-size: 2.4rem;
+				}
+			}
+		}
+		.grafico {
+			&__title {
+				font-size: 2.7rem;
+			}
+			&__main {
+				width: 100%;
+			}
+		}
+		.department-eval {
+			&__title {
+				font-size: 2.7rem;
+			}
+			&__main {
+				i {
+					font-size: 3.7rem;
+				}
+				&__text {
+					font-size: 1.6rem;
+				}
+			}
+			.button--brown {
+				position: absolute;
+				bottom: 30px;
+				right: 0;
+				left: 0;
+				width: 150px;
+				height: 30px;
+				padding: 5px;
+				margin: 5px auto;
+				a {
+					font-size: 1.6rem;
+					font-family: $fuente2;
+					font-weight: bold;
+					text-decoration: none;
+					color: $white;
+				}
+				background-color: $browndark;
+				border: 0;
+				box-shadow: 0 4px 8px rgba(13,13, 13, 0.7);
+				cursor: pointer;
+			}	
+			.button--brown:hover {
+				a {
+					color: $browndark;
+				}
+				background-color: $brownlight;
+				border: 0;
+				box-shadow: 0 4px 8px rgba(13,13, 13, 0.7);
+			}
+		}
+	}
+
+}

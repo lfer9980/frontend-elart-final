@@ -1,0 +1,93 @@
+{% extends "equipo/layout.html"%}
+{% block content %}
+<main class="home">
+	<h1 class="home__tile">OverView - l’partenaire</h1>
+
+	<div class="home__section">
+
+		<section class="profile-main">
+			<div class="profile-main__foto">
+
+				<picture> <img src="" alt="">
+					<figcaption> {{nombre}} </figcaption>
+					<figcaption>{{departamento}}</figcaption>
+				</picture>
+			</div>
+
+			<div class="profile-main__nivel">
+				<div class="profile-main__nivel">
+					<i class="material-icons">check_circle_outline</i>
+					<p>rango</p>
+					<p><span>{{insignia}}</span></p>
+				</div>
+				<div class="profile-main__estrella">
+					<i class="material-icons">stars</i>
+					<p>
+						<span>{{promedioEstrellas}}</span>
+						<span>estrellas</span>
+					</p>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	{% if marcador %}
+		<div class="home__section">
+			<section class="profile-points">
+				<div class="profile-points__header">
+					<div class="profile-point__header__left">
+						<h4 class="profile-points__title"> Su marcador </h4>
+						<div class="profile__header__points">
+							<i class="material-icons">accessibility </i>
+							<span>{{puntos}}</span>
+						</div>
+					</div>
+
+					<div class="profile-point__header__left">
+						<canvas id=#doughnut></canvas>
+					</div>
+				</div>
+
+				<div class="profile-points__main">
+					<h4>Sus ultimas Evaluaciones: </h4>
+
+					{% for tipo, comentario in tipoComentario_comentarios %}
+					<div class="profile-points__main__card">
+						<i class="material-icons">{{tipo}} </i>
+						<p class="department-eval__main__text"> {{comentario}}</p>
+					</div>
+					{% endfor %}
+				</div>
+				<div class="button--brown"> <a href="">Realizar una evaluación</a></div>
+			</section>
+		</div>
+
+		{% else %}
+		{% extends "equipo/vacio.html" %}
+		{% endif %}
+
+		<div class="home__section">
+			<section class="team-overview">
+				<h1 class="team-overview__title">Miembros activos:</h1>
+				<h2 class="team-overview__subtitle">{{nombres | length }} miembros</h2>
+				<div class="team-overview__main">
+
+					{%for nombre in nombres %}
+						<article class="team-overview__main__card">
+							<div class="card__left">
+								<img src="" alt="">
+							</div>
+							<div class="card__right">
+								<span class="card__title">
+									{{nombre}}
+								</span>
+							</div>
+						</article>
+					{% endfor %}
+				</div>
+			</section>
+		</div>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,80 @@
+.sidebar {
+	position: relative;
+	max-width: 250px;
+	height: 100vh;
+	background-color: rgba($color: #8C4830, $alpha: 0.6	);
+	background-blend-mode: multiply;
+	text-align: center;
+	padding: 30px;
+	margin-right: 20px;
+	border-right: 1px solid $brownlight;
+	box-shadow: 0 4px 8px rgba(13,13, 13, 0.7);
+	&__logo {
+		width: 100px;
+		height: auto;
+		margin: 20px auto;
+
+	}
+	&__username {
+		font-family: $fuente2;
+		font-size: 1.8rem;
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+	&__nav {
+		text-align: left;
+		&__data {
+			list-style: none;
+		}
+	}
+	&__item {
+		margin-bottom: 15px;
+		font-size: 1.6rem;
+		padding: 5px;
+		a {
+			i {
+				padding-right: 5px;
+			}
+			display: flex;
+			align-items: center;
+			text-decoration: none;
+			color: $white;
+		}
+	}
+	&__item:hover {
+		background-color: $brownlight;
+		a {
+			font-weight: bold;
+			color: $browndark;
+		}
+	}
+	.button--brown {
+		position: absolute;
+		bottom: 30px;
+		right: 0;
+		left: 0;
+		width: 150px;
+		height: 30px;
+		padding: 5px;
+		margin: 5px auto;
+		a {
+			font-size: 1.6rem;
+			font-family: $fuente2;
+			font-weight: bold;
+			text-decoration: none;
+			color: $white;
+		}
+		background-color: $browndark;
+		border: 0;
+		box-shadow: 0 4px 8px rgba(13,13, 13, 0.7);
+		cursor: pointer;
+	}	
+	.button--brown:hover {
+		a {
+			color: $browndark;
+		}
+		background-color: $brownlight;
+		border: 0;
+		box-shadow: 0 4px 8px rgba(13,13, 13, 0.7);
+	}
+}

@@ -1,0 +1,70 @@
+{%extends "admin/layout.html" %}
+{% block content %}
+	<main class="home">
+		
+		<h1 class="home__title">OverView - l’chef</h1>
+
+		<div class="home__wrapper">	
+			<div class="home__wrapper__section">
+				<section class="profile-main">				
+					<picture  class="profile-main__foto"> 
+						<img src="../../static/assets/img/avatar1.png" alt="Imagen de usuario">
+						<span> {{nombre}} </span>
+						<span> {{tipo}} </span>
+					</picture>
+				</section>
+			</div>
+			{% if marcardor %}
+				<div class="home__wrapper__section">		
+					<section class="estrellas">
+						<h3 class="estrellas__title">Promedio general de insignias:</h3>
+						<div class="estrellas__card">
+							<p>Por departamento</p>
+							<div class="estrellas__wrapper"> 
+								{% for estrella in estrellasdepartamento %}
+									<i class="material-icons">stars </i>
+								{% endfor %}
+							</div>
+						</div>
+						
+						<div class="estrellas__card">		
+							<p>Por usuario</p>
+							<div class="estrellas__wrapper"> 
+								{% for estrella in estrellas_empleados %}
+									<i class="material-icons">stars </i>
+								{% endfor %}
+							</div>
+						</div>
+					</section>
+	
+					<section class="grafico">
+						<h3 class="grafico__title">Promedio general de comentarios:</h3>
+						<div class="grafico__main">
+							<canvas id="plot"> </canvas>
+							<canvas id="doughnut"></canvas>
+						</div>
+					</section>
+				</div>
+	
+				<div class="home__wrapper__section">
+					<section class="department-eval">
+						<h4 class="department-eval__title">Ultimas evaluaciones registradas</h4>
+						<div class="department-eval__main">
+							{% for tipo, comentario in tipoComentario_comentarios %}
+								<i class="material-icons">{{tipo}} </i>	
+								<p class="department-eval__main__text"> {{comentario}}</p>
+							{% endfor %}
+						</div>
+						<div class="button--brown">
+							<a href="/auth/admin/reportes">Más información </a>
+						</div>
+					</section>
+				</div>
+			{% else %}
+				{% include "admin/vacio.html" %}
+			{% endif %}
+		</div>
+
+	</main>
+
+{% endblock %}
